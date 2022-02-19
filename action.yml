@@ -53,7 +53,7 @@ runs:
       working-directory: ${{ inputs.workingdirectory }}
     - run: sudo apt install zip -y
       shell: bash
-    - run: tyrano -p ${{inputs.platform}} -t ${{inputs.title}} -w ${{inputs.width}} -h ${{inputs.height}} -d ${{inputs.game_name}} -e ${{inputs.game_name}}
+    - run: tyrano -p ${{inputs.platform}} -t ${{inputs.title}} -w ${{inputs.width}} -H ${{inputs.height}} -d ${{inputs.game_name}} -e ${{inputs.game_name}}
       shell: bash
       working-directory: ${{ inputs.workingdirectory }}
     - run: zip -r ${{ inputs.zip_name }} ${{inputs.game_name}}
