@@ -1,0 +1,11 @@
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        uses: PenguinCabinet/tyranoscript-packager-action
+
+        with:
+          workingdirectory: "test"
