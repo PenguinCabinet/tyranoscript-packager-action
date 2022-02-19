@@ -26,7 +26,7 @@ runs:
     - run: npm install -g tyranoscript-packager
       shell: bash
       working-directory: ${{ inputs.workingdirectory }}
-    - run: apt install zip -y
+    - run: sudo apt install zip -y
       shell: bash
     - run: tyrano
       shell: bash
