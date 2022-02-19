@@ -64,13 +64,18 @@ runs:
     - run: zip -r ${{ inputs.zip_name }} ${{inputs.game_name}}
       shell: bash
       working-directory: ${{ inputs.workingdirectory }}
+    - name: Get release
+      id: get_release
+      uses: bruceadams/get-release@v1.2.3
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ inputs.upload_url }}
+        upload_url: ${{ steps.get_release.outputs.upload_url }}
         asset_path: ${{ inputs.workingdirectory }}/${{ inputs.zip_name }}
         asset_name: ${{ inputs.zip_name }}
         asset_content_type: application/zip
