@@ -26,7 +26,7 @@ jobs:
           tag:  ${{ github.ref }}
 ```
 中身はこうしてください  
-これでリポジトリにタグを作りpushするとGithub Actionが発火して、Windows版がリリースされます  
+これでリポジトリにタグを作りpushするとGithub Actionが発火して、Windows版がリリースされます(タグの例:v0.0.1)  
 
 ## すべてのオプション
 ```yml
