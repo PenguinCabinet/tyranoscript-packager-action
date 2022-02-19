@@ -42,7 +42,7 @@ inputs:
     required: false
     default: 'game' 
   upload_url:
-    description: 'Set ${{github.event.release.upload_url}}'
+    description: 'Set github.event.release.upload_url'
     required: true
     default: '' 
 
