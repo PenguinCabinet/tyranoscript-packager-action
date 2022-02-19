@@ -20,7 +20,7 @@ jobs:
         with:
           submodules: true  
       - name: test
-        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.20
+        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.21
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag:  ${{ github.ref }}
@@ -44,9 +44,9 @@ jobs:
         with:
           submodules: true  
       - name: test
-        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.20
+        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.21
         with:
-            workingdirectory: "./" #プロジェクトがあるパス
+            workingdirectory: "." #プロジェクトがあるパス
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             tag:  ${{ github.ref }}
             zip_name: 'release.zip'
