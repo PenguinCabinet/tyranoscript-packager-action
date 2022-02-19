@@ -65,7 +65,7 @@ runs:
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        upload_url: ${{ github.event.release.upload_url }}
         asset_path: ${{ inputs.workingdirectory }}/${{ inputs.zip_name }}
         asset_name: ${{ inputs.zip_name }}
         asset_content_type: application/zip
