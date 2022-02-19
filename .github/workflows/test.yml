@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: test
         uses: PenguinCabinet/tyranoscript-packager-action@v0.0.1
-
         with:
           workingdirectory: "test"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
