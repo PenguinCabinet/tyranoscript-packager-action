@@ -68,7 +68,7 @@ runs:
       id: get_release
       uses: bruceadams/get-release@v1.2.3
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1.0.1
