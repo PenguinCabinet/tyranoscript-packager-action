@@ -8,7 +8,7 @@ jobs:
         with:
           submodules: true  
       - name: test
-        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.3
+        uses: PenguinCabinet/tyranoscript-packager-action@v0.1.4
         with:
           workingdirectory: "test"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
