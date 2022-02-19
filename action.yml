@@ -54,4 +54,4 @@ runs:
         asset_path: release.zip
         asset_name: release.zip
         asset_content_type: application/zip
-        
+      working-directory: ${{ inputs.workingdirectory }}
