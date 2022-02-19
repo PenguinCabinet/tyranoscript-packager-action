@@ -33,6 +33,7 @@ runs:
       working-directory: ${{ inputs.workingdirectory }}
     - run: zip -r release.zip ./dest/*
       shell: bash
+      working-directory: ${{ inputs.workingdirectory }}
     - name: Create release
       id: create_release
       uses: actions/create-release@v1.0.0
