@@ -21,9 +21,9 @@ runs:
   using: 'composite'
   steps:
     - uses: actions/setup-node@v2
-    with:
-      node-version: '14'
-      cache: npm
+      with:
+        node-version: '14'
+        cache: npm
     - run: npm install -g tyranoscript-packager
       shell: bash
       working-directory: ${{ inputs.workingdirectory }}
